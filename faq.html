@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niile Properties - FAQs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0F3F39",
+              primaryDark: "#047857",
+              secondary: "#0f766e",
+              accent: "#f97316",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+      .accordion-content {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header -->
+    <nav class="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index5.html">
+          <img src="assets/niile_logo_text2.png" alt="Niile Logo" class="h-7 w-auto" />
+        </a>
+        <div class="space-x-6 font-medium">
+          <a href="index5.html" class="hover:text-primary">Home</a>
+          <a href="faq.html" class="text-accent font-semibold">FAQs</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- FAQ Section -->
+    <section class="pt-28 pb-20 bg-[#FDF1EA] min-h-screen">
+      <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
+          Frequently Asked Questions
+        </h1>
+
+        <!-- FAQ Sections -->
+        <div id="faq-sections" class="space-y-10"></div>
+      </div>
+    </section>
+
+    <script>
+      // FAQ data grouped into sections
+      const faqData = [
+        {
+          section: "Platform Basics & Usage",
+          items: [
+            { q: "What is Niile and how does it work?", a: "Niile is a verified real estate platform that connects property buyers, sellers, and renters with accurate listings, property data, and visualization tools for informed decision-making." },
+            { q: "How is Niile different from other real estate platforms in Africa?", a: "Niile focuses on property verification, neighborhood data, and interactive tools like 3D tours and flood risk mapping, setting it apart from typical listing platforms." },
+            { q: "Do I need to create an account to view listings?", a: "No, you can view property listings without an account, but creating one unlocks features like saved searches, alerts, and personalized recommendations." },
+            { q: "Can I use Niile to buy or rent properties outside Nigeria?", a: "Currently, Niile focuses on Nigerian properties, but expansion to other African countries is planned in the near future." },
+            { q: "How do I create a listing on Niile?", a: "You can list a property by signing up for a free account, submitting property details, and uploading verification documents through your dashboard." }
+          ]
+        },
+        {
+          section: "Property Verification & Security",
+          items: [
+            { q: "How does Niile verify property ownership documents?", a: "Niile partners with local authorities and professionals to cross-check land titles and ownership records before approving any listing." },
+            { q: "Can Niile help me avoid fraudulent property deals?", a: "Yes, verified listings reduce fraud risk by ensuring ownership and documentation validity before you make contact with sellers." },
+            { q: "What security checks are done on each property listing?", a: "Title verification, land record checks, and identity verification of property owners are standard checks before a listing goes live." },
+            { q: "How accurate is the neighborhood risk and utilities data?", a: "Niile sources real-time data from reliable providers for electricity, security incidents, and flood mapping for accurate insights." }
+          ]
+        },
+        {
+          section: "Visualization & Features",
+          items: [
+            { q: "What are 3D virtual tours and floor plans, and how do they work?", a: "3D tours allow you to explore properties online using immersive visuals, while floor plans show property layouts with accurate dimensions." },
+            { q: "Can I view multiple properties remotely before deciding to visit in person?", a: "Yes, you can schedule multiple virtual tours to compare properties remotely before physical inspections." },
+            { q: "How do I access the flood risk, security status, and electricity data?", a: "These insights are integrated into each property’s listing page so you can evaluate neighborhood conditions easily." }
+          ]
+        },
+        {
+          section: "For Property Owners & Investors",
+          items: [
+            { q: "How do property owners benefit from listing on Niile?", a: "Owners gain visibility with verified listings, data-driven pricing tools, and access to serious buyers and renters." },
+            { q: "Can Niile help me track occupancy rates and portfolio performance?", a: "Yes, Niile provides portfolio analytics for landlords and investors to monitor occupancy, cash flow, and returns." },
+            { q: "Does Niile provide tools for projecting rental income or property appreciation?", a: "Our analytics dashboard includes tools for forecasting rental yields and long-term appreciation potential." }
+          ]
+        },
+        {
+          section: "Payments & Pricing",
+          items: [
+            { q: "How much does it cost to use Niile?", a: "Browsing listings is free. Premium features like promoted listings have affordable plans for sellers." },
+            { q: "Are there any fees for listing or viewing properties?", a: "Viewing properties is free. Listing fees apply only for premium marketing or priority visibility features." },
+            { q: "How does Niile handle escrow or secure payments between buyers and sellers?", a: "Niile is partnering with licensed escrow providers to enable safe, transparent payment handling." }
+          ]
+        },
+        {
+          section: "Support & Availability",
+          items: [
+            { q: "What should I do if I find incorrect information on a listing?", a: "You can report inaccuracies directly from the property page or contact support for assistance." },
+            { q: "How do I contact Niile’s support team?", a: "Support can be reached via email at support@niile.online or through the live chat on our website." },
+            { q: "Is Niile available on mobile devices?", a: "Yes, Niile is mobile-friendly, and a dedicated mobile app is coming soon for iOS and Android users." }
+          ]
+        }
+      ];
+
+      // Generate FAQ HTML dynamically
+      const faqContainer = document.getElementById("faq-sections");
+
+      faqData.forEach(section => {
+        const sectionEl = document.createElement("div");
+        sectionEl.innerHTML = `
+          <h2 class="text-xl font-semibold mb-4 text-primary">${section.section}</h2>
+          <div class="space-y-3">
+            ${section.items.map(item => `
+              <div class="border rounded-lg p-4 bg-white shadow-sm">
+                <button class="w-full text-left font-medium flex justify-between items-center accordion-btn">
+                  ${item.q}
+                  <span class="text-accent">+</span>
+                </button>
+                <div class="accordion-content mt-2 text-sm text-gray-600">
+                  ${item.a}
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        `;
+        faqContainer.appendChild(sectionEl);
+      });
+
+      // Accordion toggle
+      document.addEventListener("click", function(e) {
+        if (e.target.closest(".accordion-btn")) {
+          const btn = e.target.closest(".accordion-btn");
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector("span");
+
+          const isOpen = content.style.display === "block";
+          content.style.display = isOpen ? "none" : "block";
+          icon.textContent = isOpen ? "+" : "-";
+        }
+      });
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

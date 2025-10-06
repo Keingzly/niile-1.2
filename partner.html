@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partner With Niile - Verified Real Estate</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0F3F39",
+              primaryDark: "#047857",
+              secondary: "#0f766e",
+              accent: "#f97316",
+              highlight: "#075056",
+              gray: {
+                50: "#f9fafb",
+                100: "#f3f4f6",
+                600: "#4b5563",
+                700: "#374151",
+                800: "#1f2937",
+                900: "#111827",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+      .form-bg {
+        background-image: url('assets/estate_image2.png');
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Navigation -->
+    <nav class="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index5.html">
+          <img src="assets/niile_logo_text2.png" alt="Niile Logo" class="h-7 w-auto" />
+        </a>
+        <div class="space-x-6 font-medium">
+          <a href="index5.html" class="hover:text-primary">Home</a>
+          <a href="faq.html" class="text-gray-700 hover:text-primary">FAQs</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Partner Form Section -->
+    <section class="relative form-bg min-h-screen flex items-center justify-center pt-20">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative max-w-2xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="bg-white/90 p-8 md:p-12 rounded-2xl shadow-2xl">
+          <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Become a Niile Partner
+            </h2>
+            <p class="text-gray-600">
+              Fill out the form below to join our network of industry leaders.
+            </p>
+          </div>
+
+          <form id="partnerForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="fullName" class="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
+                <input type="text" id="fullName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe" />
+              </div>
+              <div>
+                <label for="companyName" class="block text-sm font-bold text-gray-700 mb-2">Company Name (Optional)</label>
+                <input type="text" id="companyName" class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your Company Inc." />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
+              <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="you@example.com" />
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
+              <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="+(xxx) xxx-xxxxxxx" />
+            </div>
+
+            <div>
+              <label for="partnerInterest" class="block text-sm font-bold text-gray-700 mb-2">I am a/an...</label>
+              <select id="partnerInterest" required class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-primary focus:border-transparent">
+                <option disabled selected hidden>Select your profession</option>
+                <option>Real Estate Agent/Broker</option>
+                <option>Property Developer</option>
+                <option>FrontEnd/BackEnd Developer</option>
+                <option>Investor</option>
+                <option>Technology Provider</option>
+                <option>Legal/Financial Services</option>
+                <option>Other</option>
+              </select>
+            </div>
+            
+            <!-- <div>
+              <label for="kyc" class="block text-sm font-bold text-gray-700 mb-2">Identity Verification (KYC)</label>
+              <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                <div class="space-y-1 text-center">
+                  <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <div class="flex text-sm text-gray-600">
+                    <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-accent hover:text-orange-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-orange-500">
+                      <span>Upload a file</span>
+                      <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                    </label>
+                    <p class="pl-1">or drag and drop</p>
+                  </div>
+                  <p class="text-xs text-gray-500">PNG, JPG, PDF up to 10MB</p>
+                </div>
+              </div>
+            </div> -->
+
+            <div>
+              <label for="message" class="block text-sm font-bold text-gray-700 mb-2">Message (Optional)</label>
+              <textarea id="message" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us more about how you'd like to partner with us."></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-accent text-white py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium text-base">
+              Submit Partnership Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div>
+            <img src="assets/niile_logo4_sm.png" alt="Logo" class="h-10 mb-4" />
+            <p class="text-gray-300">
+              The new way to find real estate properties to buy or rent from anywhere worldwide.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">COMPANY</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="faq.html" class="hover:text-white transition-colors">FAQs</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">LEGAL</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+          <p>&copy; Copyright 2025. All Rights Reserved by Niile</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const params = new URLSearchParams(window.location.search);
+
+        const fullName = params.get('fullName');
+        const email = params.get('email');
+        const phone = params.get('phone');
+        const message = params.get('message');
+
+        if (fullName) document.getElementById('fullName').value = fullName;
+        if (email) document.getElementById('email').value = email;
+        if (phone) document.getElementById('phone').value = phone;
+        if (message) document.getElementById('message').value = message;
+
+        // Pre-select "Investor" as that's the context for the redirect
+        document.getElementById('partnerInterest').value = 'Investor';
+
+        // Handle form submission to redirect to the thank you page
+        document.getElementById('partnerForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          window.location.href = 'thank-you.html';
+        });
+      });
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

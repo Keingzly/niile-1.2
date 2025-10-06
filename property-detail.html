@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from regal-custard-5a1ec8.netlify.app/property-detail by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Sep 2025 13:33:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2 Bedroom Duplex in Kyalami - Niile Properties</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="../cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#059669",
+              primaryDark: "#047857",
+              secondary: "#0f766e",
+              accent: "#f97316",
+              gray: {
+                0: "#ffffff",
+                50: "#f9fafb",
+                100: "#f3f4f6",
+                600: "#4b5563",
+                700: "#374151",
+                800: "#1f2937",
+                900: "#111827",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-0">
+    <!-- Navigation -->    
+    <nav class="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center h-16">
+        <a href="index.html">
+          <img src="assets/niile_logo_text2.png" alt="Niile Logo" class="h-7 w-auto" />
+        </a>
+        <div class="space-x-6 font-medium">
+          <a href="index.html" class="hover:text-primary">Home</a>
+          <a href="faq.html" class="text-gray-700 hover:text-primary">FAQs</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Property Header -->
+    <!-- Announcement Bar -->
+    <div class="bg-secondary text-white text-center text-sm font-semibold pt-12 pb-2" style="padding-top: 5rem;">
+      🚀 Coming soon! This is a preview of a NIILE’s property details interface
+    </div>
+
+    <!-- Property Header (New Hero) -->
+    <section class="bg-gray-0 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-white rounded-2xl mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
+        >
+          <!-- Image Gallery -->
+          <div>
+            <div id="image-gallery" class="relative shadow-lg rounded-2xl">
+              <!-- Image container -->
+              <div class="relative rounded-2xl overflow-hidden h-72 md:h-[380px]">
+                <div id="gallery-track" class="flex h-full" style="transition: transform 0.5s ease-in-out;">
+                  <img src="assets/Ayobo2.png" alt="Property Image 1" class="gallery-image w-full h-full object-cover flex-shrink-0">
+                  <img src="assets/niile_logo_text2.png" alt="Property Image 2" class="gallery-image w-full h-full object-cover flex-shrink-0">
+                  <img src="assets/Ayobo2.png" alt="Property Image 3" class="gallery-image w-full h-full object-cover flex-shrink-0">
+                  <img src="assets/niile_logo_text2.png" alt="Property Image 4" class="gallery-image w-full h-full object-cover flex-shrink-0">
+                  <img src="assets/Ayobo2.png" alt="Property Image 5" class="gallery-image w-full h-full object-cover flex-shrink-0">
+                  <img src="assets/niile_logo_text2.png" alt="Property Image 6" class="gallery-image w-full h-full object-cover flex-shrink-0">
+                  <img src="assets/Ayobo2.png" alt="Property Image 7" class="gallery-image w-full h-full object-cover flex-shrink-0">
+                  <img src="assets/niile_logo_text2.png" alt="Property Image 8" class="gallery-image w-full h-full object-cover flex-shrink-0">
+                  <img src="assets/Ayobo2.png" alt="Property Image 9" class="gallery-image w-full h-full object-cover flex-shrink-0">
+                  <img src="assets/niile_logo_text2.png" alt="Property Image 10" class="gallery-image w-full h-full object-cover flex-shrink-0">
+                </div>
+              </div>
+
+              <!-- Navigation Arrows -->
+              <button id="prev-image" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition-colors z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+              </button>
+              <button id="next-image" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition-colors z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              </button>
+            </div>
+
+            <!-- Dots and Counter -->
+            <div class="mt-3 flex justify-center items-center gap-4">
+              <div id="gallery-dots" class="flex gap-2">
+                <!-- Dots will be generated by JS -->
+              </div>
+              <div class="text-sm text-gray-600 font-medium">
+                <span id="current-image-index">1</span> / <span id="total-images">10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Details -->
+          <div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-[#1e1934]">
+              3bedroom Apartment in Ayobo
+            </h1>
+
+            <div
+              class="mt-2 flex flex-wrap items-center gap-3 text-sm text-gray-600"
+            >
+              <span>📍 Ayobo, Lagos</span>
+              <span>🏠 Duplex</span>
+              <span>💰 For Rent</span>
+              <button id="property-status" class="ml-auto flex items-center gap-2 bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium cursor-pointer transition-colors">
+                <span class="h-2 w-2 bg-green-500 rounded-full"></span>
+                <span class="status-text">Available</span>
+              </button>
+            </div>
+
+            <div class="mt-4 flex items-baseline gap-3">
+              <span class="text-accent text-3xl md:text-4xl font-extrabold"
+                >₦2,500,000</span
+              >
+              <span class="text-gray-500">per year</span>
+            </div>
+
+            <!-- Feature Tiles -->
+            <div class="mt-6 grid grid-cols-3 gap-3 md:gap-4">
+              <div
+                class="bg-white rounded-xl text-center p-4 shadow-md"
+              >
+                <div class="text-2xl font-bold text-gray-900">3</div>
+                <div class="text-gray-500 text-sm">Bedrooms</div>
+              </div>
+              <div
+                class="bg-white rounded-xl text-center p-4 shadow-md"
+              >
+                <div class="text-2xl font-bold text-gray-900">3</div>
+                <div class="text-gray-500 text-sm">Bathrooms</div>
+              </div>
+              <div
+                class="bg-white rounded-xl text-center p-4 shadow-md"
+              >
+                <div class="text-2xl font-bold text-gray-900">4</div>
+                <div class="text-gray-500 text-sm">Toilets</div>
+              </div>
+              <div
+                class="bg-white rounded-xl text-center p-4 shadow-md"
+              >
+                <div class="text-2xl font-bold text-gray-900">240</div>
+                <div class="text-gray-500 text-sm">sqm</div>
+              </div>
+              <div
+                class="bg-white rounded-xl text-center p-4 shadow-md"
+              >
+                <div class="text-2xl font-bold text-gray-900">Ground</div>
+                <div class="text-gray-500 text-sm">Floor</div>
+              </div>
+              <div
+                class="bg-white rounded-xl text-center p-4 shadow-md"
+              >
+                <div class="text-2xl font-bold text-gray-900">No</div>
+                <div class="text-gray-500 text-sm">Furnished</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quantitative Property Metrics -->
+    <section class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12">
+          Property Metrics
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="text-center">
+            <div class="bg-red-50 p-6 rounded-lg mb-4">
+              <canvas id="ratingChart" width="150" height="150"></canvas>
+            </div>
+            <h3 class="font-semibold text-gray-900">Rating</h3>
+            <p class="text-2xl font-bold text-red-500">7.2/10</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-blue-50 p-6 rounded-lg mb-4">
+              <canvas id="individualityChart" width="150" height="150"></canvas>
+            </div>
+            <h3 class="font-semibold text-gray-900">Price Individuality</h3>
+            <p class="text-2xl font-bold text-blue-500">85%</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-green-50 p-6 rounded-lg mb-4">
+              <canvas id="scoreChart" width="150" height="150"></canvas>
+            </div>
+            <h3 class="font-semibold text-gray-900">Monthly Score</h3>
+            <p class="text-2xl font-bold text-green-500">92</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Description -->
+    <section class="bg-gray-0 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Property Description
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              This stunning 2-bedroom duplex in the prestigious Kyalami area
+              offers modern living at its finest. With contemporary finishes,
+              spacious layouts, and premium amenities, this property represents
+              exceptional value in one of Johannesburg's most sought-after
+              neighborhoods.
+            </p>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              The property features an open-plan living area, modern kitchen
+              with high-end appliances, two generous bedrooms with built-in
+              wardrobes, and two full bathrooms. The outdoor space includes a
+              private garden and covered patio perfect for entertaining.
+            </p>
+
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <span class="text-primary mr-2">✓</span>
+                Modern kitchen with granite countertops
+              </li>
+              <li class="flex items-center">
+                <span class="text-primary mr-2">✓</span>
+                Built-in wardrobes in all bedrooms
+              </li>
+              <li class="flex items-center">
+                <span class="text-primary mr-2">✓</span>
+                Private garden and patio
+              </li>
+              <li class="flex items-center">
+                <span class="text-primary mr-2">✓</span>
+                24-hour security
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Details -->
+    <section class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12">Location Details</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <!-- Map placeholder -->
+            <div
+              class="bg-gray-200 rounded-lg h-96 flex items-center justify-center"
+            >
+              <div class="text-center">
+                <div class="text-6xl text-gray-400 mb-4">📍</div>
+                <p class="text-gray-600">Interactive Map</p>
+                <p class="text-sm text-gray-500">Lagos, Nigeria</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-6">
+              Nearby Amenities
+            </h3>
+            <div class="space-y-4">
+              <div
+                class="flex justify-between items-center p-4 bg-gray-50 rounded-lg"
+              >
+                <span>Kyalami Corner Shopping Centre</span>
+                <span class="text-primary font-medium">2.1 km</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-4 bg-gray-50 rounded-lg"
+              >
+                <span>Reddam House School</span>
+                <span class="text-primary font-medium">3.5 km</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-4 bg-gray-50 rounded-lg"
+              >
+                <span>Netcare Olivedale Hospital</span>
+                <span class="text-primary font-medium">4.2 km</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-4 bg-gray-50 rounded-lg"
+              >
+                <span>Lanseria International Airport</span>
+                <span class="text-primary font-medium">15 km</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-4 bg-gray-50 rounded-lg"
+              >
+                <span>Sandton City</span>
+                <span class="text-primary font-medium">18 km</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media Assets -->
+    <!-- <section class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12">Media Assets</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <img
+            src="../images.pexels.com/photos/323780/pexels-photo-3237808e5d.jpg?auto=compress&amp;cs=tinysrgb&amp;w=400"
+            alt="Property exterior"
+            class="rounded-lg shadow-lg h-[250px] w-full object-cover hover:shadow-xl transition-shadow cursor-pointer"
+          />
+          <img
+            src="../images.pexels.com/photos/1396122/pexels-photo-13961228e5d.jpg?auto=compress&amp;cs=tinysrgb&amp;w=400"
+            alt="Living room"
+            class="rounded-lg shadow-lg h-[250px] w-full object-cover hover:shadow-xl transition-shadow cursor-pointer"
+          />
+          <img
+            src="../images.pexels.com/photos/1475938/pexels-photo-14759388e5d.jpg?auto=compress&amp;cs=tinysrgb&amp;w=400"
+            alt="Kitchen"
+            class="rounded-lg shadow-lg h-[250px] w-full object-cover hover:shadow-xl transition-shadow cursor-pointer"
+          />
+          <img
+            src="../images.pexels.com/photos/2102587/pexels-photo-21025878e5d.jpg?auto=compress&amp;cs=tinysrgb&amp;w=400"
+            alt="Bedroom"
+            class="rounded-lg shadow-lg h-[250px] w-full object-cover hover:shadow-xl transition-shadow cursor-pointer"
+          />
+          <img
+            src="../images.pexels.com/photos/2080018/pexels-photo-20800188e5d.jpg?auto=compress&amp;cs=tinysrgb&amp;w=400"
+            alt="Bathroom"
+            class="rounded-lg shadow-lg h-[250px] w-full object-cover hover:shadow-xl transition-shadow cursor-pointer"
+          />
+          <img
+            src="../images.pexels.com/photos/1643384/pexels-photo-16433848e5d.jpg?auto=compress&amp;cs=tinysrgb&amp;w=400"
+            alt="Garden"
+            class="rounded-lg shadow-lg h-[250px] w-full object-cover hover:shadow-xl transition-shadow cursor-pointer"
+          />
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Interactive Tools -->
+    <section class="bg-gray-0 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12">
+          Interactive Tools
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-semibold text-gray-900 mb-4">
+              Mortgage Calculator
+            </h3>
+            <p class="text-gray-600 mb-4">Calculate your monthly payments</p>
+            <button
+              class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primaryDark transition-colors"
+            >
+              Calculate
+            </button>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-semibold text-gray-900 mb-4">
+              Investment Analysis
+            </h3>
+            <p class="text-gray-600 mb-4">Analyze potential returns</p>
+            <button
+              class="w-full bg-accent text-white py-2 rounded-lg hover:bg-orange-600 transition-colors"
+            >
+              Analyze
+            </button>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-semibold text-gray-900 mb-4">Market Comparison</h3>
+            <p class="text-gray-600 mb-4">Compare similar properties</p>
+            <button
+              class="w-full bg-secondary text-white py-2 rounded-lg hover:bg-teal-700 transition-colors"
+            >
+              Compare
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-white py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Interested in this property?
+          </h2>
+          <p class="text-xl text-gray-600">
+            Get in touch with our team for more details
+          </p>
+        </div>
+
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >Name</label
+            >
+            <input
+              type="text"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >Phone</label
+            >
+            <input
+              type="tel"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >Preferred Contact</label
+            >
+            <select
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            >
+              <option>Phone</option>
+              <option>Email</option>
+              <option>WhatsApp</option>
+            </select>
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >Message</label
+            >
+            <textarea
+              rows="4"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            ></textarea>
+          </div>
+          <div class="md:col-span-2">
+            <button
+              type="submit"
+              class="w-full bg-accent text-white py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+            >
+              Send Inquiry
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Niile</h3>
+            <p class="text-gray-300">
+              A revolutionary real estate platform combining data insights with
+              intuitive design.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Product</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Properties</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Analytics</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Market Data</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Tools</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Company</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>
+                <a href="#" class="hover:text-white transition-colors">About</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Press</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Support</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Privacy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Terms</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300"
+        >
+          <p>&copy; 2025 Niile Properties. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/property-detail.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const gallery = document.getElementById('image-gallery');
+        if (gallery) {
+          const track = document.getElementById('gallery-track');
+          const prevButton = document.getElementById('prev-image');
+          const nextButton = document.getElementById('next-image');
+          const dotsContainer = document.getElementById('gallery-dots');
+          const currentIndexSpan = document.getElementById('current-image-index');
+          const totalImagesSpan = document.getElementById('total-images');
+
+          let currentIndex = 0;
+          const totalImages = track.children.length;
+          totalImagesSpan.textContent = totalImages;
+
+          // Create dots
+          for (let i = 0; i < totalImages; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('h-2', 'w-2', 'rounded-full', 'transition-colors');
+            dot.dataset.index = i;
+            dotsContainer.appendChild(dot);
+          }
+          const dots = dotsContainer.querySelectorAll('button');
+
+          function updateGallery(index) {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((dot, i) => {
+              dot.classList.toggle('bg-accent', i === index);
+              dot.classList.toggle('bg-gray-300', i !== index);
+            });
+            currentIndexSpan.textContent = index + 1;
+            currentIndex = index;
+          }
+
+          prevButton.addEventListener('click', () => {
+            const newIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateGallery(newIndex);
+          });
+
+          nextButton.addEventListener('click', () => {
+            const newIndex = (currentIndex + 1) % totalImages;
+            updateGallery(newIndex);
+          });
+
+          dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+              updateGallery(parseInt(e.target.dataset.index));
+            });
+          });
+
+          // Initial state
+          updateGallery(0);
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const statusButton = document.getElementById('property-status');
+        if (statusButton) {
+          statusButton.addEventListener('click', function() {
+            const dot = this.querySelector('span:first-child');
+            const text = this.querySelector('.status-text');
+            const isAvailable = text.textContent === 'Available';
+
+            if (isAvailable) {
+              // Change to Occupied
+              text.textContent = 'Occupied';
+              this.classList.remove('bg-green-100', 'text-green-800');
+              this.classList.add('bg-red-100', 'text-red-800');
+              dot.classList.remove('bg-green-500');
+              dot.classList.add('bg-red-500');
+            } else {
+              // Change to Available
+              text.textContent = 'Available';
+              this.classList.remove('bg-red-100', 'text-red-800');
+              this.classList.add('bg-green-100', 'text-green-800');
+              dot.classList.remove('bg-red-500');
+              dot.classList.add('bg-green-500');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+
+<!-- Mirrored from regal-custard-5a1ec8.netlify.app/property-detail by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Sep 2025 13:33:58 GMT -->
+</html>

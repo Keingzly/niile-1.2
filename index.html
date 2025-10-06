@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from regal-custard-5a1ec8.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Sep 2025 13:33:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niile Properties - Verified Real Estate</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0F3F39",
+              primaryDark: "#047857",
+              secondary: "#0f766e",
+              accent: "#f97316",
+              highlight: "#075056",
+              gray: {
+                50: "#f9fafb",
+                100: "#f3f4f6",
+                600: "#4b5563",
+                700: "#374151",
+                800: "#1f2937",
+                900: "#111827",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+      .feature-card.is-visible {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <div id="top"></div>
+    <!-- Navigation -->
+<nav
+  id="navbar"
+  class="fixed w-full top-0 z-50 transition-colors duration-300 bg-transparent"
+>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo Image Placeholder -->
+      <a h1 class="flex items-center">
+        <img
+          src="assets/niile_logo_text2.png"
+          alt="Niile Logo"
+          class="h-7 w-auto object-contain"
+        />
+      </a>
+
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="#top" class="hover:text-primary">Home</a>
+        <a href="#what-we-are-building" class="text-gray-700 hover:text-primary">About</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Services</a>
+        <a href="faq.html" class="text-gray-700 hover:text-primary">FAQs</a>
+        <a href="#get-in-touch" onclick="highlightGetInTouch(event)" class="text-gray-700 hover:text-primary">Contact</a>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <button
+          href="#earlyAccessForm"
+          onclick="window.location.href='property-detail.html'"
+          class="bg-transparent border border-accent text-accent px-6 py-2 rounded-xl text-sm font-medium hover:bg-orange-600 hover:text-white transition-colors"
+        >
+          List Property
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-[#FDF1EA] overflow-hidden pt-32 pb-32">
+  <!-- Top-to-bottom fade overlay for the entire section -->
+  <div class="absolute inset-0 pointer-events-none" 
+       style="background: linear-gradient(to top, #FFFFFF 0%, #00000000 30%); z-index: 1;">
+  </div>
+
+  <!-- Background image with left-to-right fade -->
+  <div class="absolute bottom-0 right-0 w-2/3 max-w-3xl h-full hidden md:block pointer-events-none select-none">
+    <img
+      src="assets/estate_image2.png"
+      alt="Hero Background"
+      class="w-full h-full object-cover rounded-t-xl"
+    />
+    <div
+      class="absolute inset-0 rounded-t-xl"
+      style="background: linear-gradient(to right, #FDF1EA 2%, #FDF1EA00 40%);"
+    ></div>
+  </div>
+
+  <!-- Hero content -->
+  <div class="max-w-7xl py-16 md:py-6 mx-auto px-6 lg:px-0 relative z-10">
+    <div class="w-full lg:w-3/4 relative z-10">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#16232A] leading-snug mb-6">
+        Verified Property Listings<br />
+        Curated With Data.<br />
+        Quantitative real estate finds<br />
+        in the palm of your hand.
+      </h1>
+      <p class="text-sm text-gray-700 mb-8">
+        Request early access to follow the Niile journey.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="#earlyAccessForm"
+          class="bg-accent text-white text-sm px-6 py-3 rounded-xl font-medium hover:bg-orange-600"
+        >
+          Request Early Access
+        </a>
+        <a class="bg-transperant border-2 text-sm border-primary text-primary px-6 py-3 rounded-xl font-medium hover:bg-gray-50 transition-colors" 
+           href="property-detail-2.html">
+          Experience the Niile Dream
+        </a>
+      </div>
+    </div>
+  </div>
+</section>    
+
+
+    <script>
+      // Navbar background toggle on scroll
+      window.addEventListener("scroll", function () {
+        const nav = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          nav.classList.remove("bg-transparent");
+          nav.classList.add("bg-white", "shadow-sm");
+          nav
+            .querySelectorAll("a")
+            .forEach((el) => el.classList.add("text-gray-700"));
+        } else {
+          nav.classList.remove("bg-white", "shadow-sm");
+          nav.classList.add("bg-transparent");
+          nav
+            .querySelectorAll("a")
+            .forEach((el) => el.classList.remove("text-gray-700"));
+        }
+      });
+    </script>
+
+    <!-- What We're Building (card overlay) -->
+    <section id="what-we-are-building" class="relative top-50 md:top-0 mt-50 md:-mt-20 pb-10 pt-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <div
+          class="bg-[#063232] text-white rounded-[28px] shadow-xl px-6 py-12 md:px-14 md:py-16"
+        >
+          <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-6">
+            What we’re Building
+          </h2>
+          <div
+            class="max-w-4xl mx-auto text-sm space-y-5 text-center text-green-100 leading-relaxed"
+          >
+            <p>
+              Niile was conceived out of a popular pain point amongst young 
+              Nigerian adults looking to find real estate properties to buy 
+              or rent and the difficulties and complicated process in our 
+              current system. This has pushed us to create a better platform 
+              that serves Africans and fosters a healthier, more transparent 
+              real estate industry.
+            </p>
+            <p>
+              With Niile, acquiring verified property listings across Africa 
+              becomes as simple as booking a hotel room. Our platform combines 
+              data, technology, and human oversight to ensure transactions are 
+              seamless, secure, and stress-free, whether you’re buying, renting, 
+              or investing from within Africa or abroad.
+            </p>
+            <p>
+              Our roadmap is ambitious: starting in Nigeria, we aim to reshape 
+             real estate across the continent with a platform designed for trust, 
+             simplicity, and intelligent property management.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section
+    <section class="bg-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16"
+        >
+          Experience a Niile Listing
+        </h2>
+        <div
+          class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
+          <div
+            class="absolute inset-0 top-0 bg-white/40 backdrop-blur-sm rounded flex items-center justify-center z-10"
+          >
+            <p className="text-lg font-semibold text-gray-700">Coming Soon</p>
+          </div>
+          <div>
+            <img
+              src="../images.pexels.com/photos/1396122/pexels-photo-1396122e7fe.jpg?auto=compress&amp;cs=tinysrgb&amp;w=600"
+              alt="Featured property"
+              class="rounded-lg shadow-lg w-full"
+            />
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Comprehensive Property Analysis
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Every property listing comes with detailed analytics, market
+              trends, and neighborhood insights to help you make informed
+              decisions.
+            </p>
+            <div class="flex space-x-4">
+              <button
+                onclick="window.location.href='property-detail.html'"
+                class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primaryDark transition-colors"
+              >
+                View Sample Property
+              </button>
+              <button
+                class="bg-accent text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Solutions Section -->
+    <section
+      id="solutions"
+      class="relative overflow-hidden bg-[#0e1f1d] text-gray-100 py-24"
+    >
+      <!-- subtle radial highlight on the right -->
+      <div
+        class="pointer-events-none absolute inset-y-0 right-0 w-2/3"
+        style="
+          background: radial-gradient(
+            55% 60% at 70% 40%,
+            rgba(255, 255, 255, 0.14) 0%,
+            rgba(255, 255, 255, 0.06) 35%,
+            rgba(255, 255, 255, 0) 70%
+          );
+        "
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <p class="text-sm font-semibold text-gray-400 mb-3">Core Advantages</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-12">
+          <span class="text-accent">Solutions</span>
+          <span class="text-gray-100">For Everyone</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8">
+          <!-- Buyers & Renters -->
+          <div class="feature-card rounded-2xl border border-orange-500/30 bg-[#0f2623]/15 backdrop-blur-sm p-6 md:p-8 opacity-0 transform -translate-x-10 transition-all duration-1000 ease-out">
+            <h3 class="text-lg md:text-xl font-semibold mb-6">
+              For Buyer &amp; Renters
+            </h3>
+            <ul class="space-y-4 text-gray-300">
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Smart filters for precise property search
+              </li>
+
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Verified property listings
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Rich neighborhood data: landmarks, amenities, and transport insights
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >KYC-enabled transactions
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Secure multi-currency digital payment options
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Detailed floorplans & Virtual tours
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Mortgage financing integration
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Saved searches & instant preference availability alerts
+              </li>
+            </ul>
+          </div>
+
+          <!-- Investors (spans two rows on desktop) -->
+          <div class="feature-card rounded-2xl border border-orange-500/30 bg-[#0f2623]/15 backdrop-blur-sm p-6 md:p-8 md:row-span-2 flex flex-col justify-top opacity-0 transform translate-x-10 transition-all duration-1000 ease-out" style="transition-delay: 200ms;">
+            <h3 class="text-lg md:text-xl font-semibold mb-6">
+              For Investors
+            </h3>
+            <ul class="space-y-4 text-gray-300">
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Cross-border property investment opportunities across Africa
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Secure portfolio management with performance insights
+              </li>
+               <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >AI-driven property valuation & risk assessment tools
+              </li>
+               <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Transparent ownership records with blockchain infrastructure
+              </li>
+               <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Investment syndication options for joint property ventures
+              </li>
+               <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Data-driven market intelligence & trend forecasting
+              </li>
+               <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Exit strategy planning & ROI simulation tools
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Dedicated investor relations support for global buyers
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Multi-currency payment options for seamless transactions
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Real-time transaction notification
+              </li>
+            </ul>
+          </div>
+
+          <!-- Landlords & Developers -->
+          <div class="feature-card rounded-2xl border border-orange-500/30 bg-[#0f2623]/15 backdrop-blur-sm p-6 md:p-8 opacity-0 transform -translate-x-10 transition-all duration-1000 ease-out" style="transition-delay: 400ms;">
+            <h3 class="text-lg md:text-xl font-semibold mb-6">
+              For Landlords &amp; Developers
+            </h3>
+            <ul class="space-y-4 text-gray-300">
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Assisted property mapping via field agents
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Seamless AI-powered floorplans, 3D model &amp; property insight generation
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Content moderation &amp; verification support
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Advanced listing analytics for performance insights &amp; occupancy tracking
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Automated tenant screening & onboarding tools
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Smart leases & sales contract templates
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Integrated multi-property management dashboards with real-time updates
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  class="h-5 w-5 text-accent mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  /></svg
+                >Lead generation tools
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collaborators Section -->
+    <section class="bg-white flex item-center justify-center py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2
+          class="text-3xl md:text-4xl lg:text-5xl max-w-4xl text-center font-bold text-gray-900 mb-6"
+        >
+          We're Always Looking For Collaborators
+        </h2>
+        <p class="text-sm md:text-xl text-gray-600 font-semibold mb-8 max-w-3xl mx-auto">
+          Join our growing network of real estate professionals, developers, and
+          industry experts who are shaping the future of property technology.
+        </p>
+        <a
+          href="partner.html"
+          class="bg-accent text-sm text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+        >
+          Partner With Us
+        </a>
+      </div>
+    </section>
+
+    <!-- Early Access Section -->
+    <section class="bg-white py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6"
+          >
+            Get Early Access
+          </h2>
+          <p class="text-sm md:text-xl text-gray-600 font-bold">
+            Be among the first to experience the future of real estate
+            discovery. We'll notify when beta is live.
+          </p>
+        </div>
+
+        <form id="earlyAccessForm" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-lg font-bold text-gray-700 mb-2"
+                >First Name</label
+              >
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-100 focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="John"
+              />
+            </div>
+            <div>
+              <label class="block text-lg font-bold text-gray-700 mb-2"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-100 focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Doe"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="block text-lg font-bold text-gray-700 mb-2"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-100 focus:ring-2 focus:ring-primary focus:border-transparent"
+              placeholder="@gmail.com"
+            />
+          </div>
+          <div>
+            <label class="block text-lg font-bold text-gray-700 mb-2"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-100 focus:ring-2 focus:ring-primary focus:border-transparent"
+              placeholder="+(xxx) xxx-xxxxxxx"
+            />
+          </div>
+          <div>
+            <label class="block text-lg font-bold text-gray-700 mb-2"
+              >Interest Level</label
+            >
+            <select
+              id="interestLevel"
+              name="interestLevel"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-100 focus:ring-2 focus:ring-primary focus:border-transparent"
+            >
+              <option disabled selected hidden>I'll use NIILE to...</option>
+              <option>Buy/Sell a home</option>
+              <option>Rent an apartment</option>
+              <option>Invest in properties</option>
+              <option>Manage my real estate portfolio</option>
+              <option>Just browsing</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-lg font-bold text-gray-700 mb-2"
+              >Location (optional)</label
+            >
+            <input
+              type="text"
+              id="location"
+              name="location"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-100 focus:ring-2 focus:ring-primary focus:border-transparent"
+              placeholder="City, State or Country"
+            />
+          </div>
+          <div>
+            <label class="block text-lg font-bold text-gray-700 mb-2"
+              >How did you hear about NIILE?</label
+            >
+            <select
+              id="source"
+              name="source"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-100 focus:ring-2 focus:ring-primary focus:border-transparent"
+            >
+              <option disabled selected hidden>Let us know how you heard about NIILE</option>
+              <option>Social Media</option>
+              <option>Friend or Colleague</option>
+              <option>Online Search</option>
+              <option>Event or Conference</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-lg font-bold text-gray-700 mb-2"
+              >Custom message (optional)</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-100 focus:ring-2 focus:ring-primary focus:border-transparent"
+              rows="3"
+              placeholder="Let us know anything else!"
+            ></textarea>
+          </div>          
+          <div class="flex items-center justify-center space-x-2">
+            <input
+              id="investor"
+              name="investor"
+              type="checkbox"
+              class="h-4 w-4 text-orange-500 border-gray-300 rounded"
+            />
+            <label for="investor" class="text-sm text-gray-700">
+              I’m interested in investing in Niile (contact me with details)
+            </label>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-accent text-white py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+          >
+            Request Early Access
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-primary text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <div>
+        <img src="assets/niile_logo_text3.png" alt="Logo" class="h-10 mb-4" />
+        <p class="text-gray-300">
+          The new way to find real estate properties to buy or rent from anywhere worldwide.
+        </p>
+        <p class="text-gray-300">
+          Niile is a revolutionary real estate platform combining data insights with
+          intuitive design.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">COMPANY</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#what-we-are-building" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Policies</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+          <li><a href="faq.html" class="hover:text-white transition-colors">FAQs</a></li>
+        </ul>
+        </ul>
+      </div>
+      <div>
+        <!-- Add this in your <head> if not already included -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+<!-- GET IN TOUCH Section -->
+ <div id="get-in-touch"></div>
+<h4 class="font-semibold mb-4">GET IN TOUCH</h4>
+<ul class="space-y-2 text-gray-300">
+  <li class="flex items-center space-x-2">
+    <i class="fa-solid fa-location-dot"></i>
+    <a href="#" class="hover:text-white transition-colors">C5, Terebinth court, VON Garden estate, Lugbe. ABUJA</a>
+  </li>
+  <li class="flex items-center space-x-2">
+    <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://wa.me/2348175156368" class="hover:text-white transition-colors">+2348175156368</a>
+  </li>
+  <li class="flex items-center space-x-2">
+    <i class="fa-solid fa-phone"></i>
+    <a href="tel:+2349132864008" class="hover:text-white transition-colors">+2349132864008</a>
+  </li>
+  <li class="flex items-center space-x-2">
+    <i class="fa-solid fa-envelope"></i>
+    <a href="mailto:support@niile.online" class="hover:text-white transition-colors">support@niile.online</a>
+  </li>
+</ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+      <p>&copy; Copyright 2025. All Rights Reserved by Niile</p>
+    </div>
+  </div>
+</footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Early Access Form Submission Handler
+        document.getElementById('earlyAccessForm').addEventListener('submit', function(event) {
+          const investorCheckbox = document.getElementById('investor');
+          if (investorCheckbox.checked) {
+            event.preventDefault();
+
+            // Collect form data
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // Build the query string
+            const params = new URLSearchParams();
+            if (firstName || lastName) params.append('fullName', `${firstName} ${lastName}`.trim());
+            if (email) params.append('email', email);
+            if (phone) params.append('phone', phone);
+            if (message) params.append('message', message);
+
+            // Redirect to the partner page with the data
+            window.location.href = `partner.html?${params.toString()}`;
+          } else {
+            event.preventDefault();
+            window.location.href = 'thank-you.html';
+          }
+        });
+      });
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+
+<!-- Mirrored from regal-custard-5a1ec8.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Sep 2025 13:33:53 GMT -->
+</html>
