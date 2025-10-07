@@ -178,35 +178,281 @@
     </section>
 
     <!-- Quantitative Property Metrics -->
-    <section class="bg-white py-16">
+    <section class="bg-gray-50 py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-12">
-          Property Metrics
+        <h2 class="text-3xl font-bold text-gray-800 mb-12">
+          Quantitative Property Metrics
         </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div class="text-center">
-            <div class="bg-red-50 p-6 rounded-lg mb-4">
-              <canvas id="ratingChart" width="150" height="150"></canvas>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8"
+        >
+          <!-- Metric 1: Flood Risk -->
+          <div class="relative group border-l-4 border-red-500 pl-6">
+            <div
+              class="absolute top-0 right-0 -mt-2 mr-2 cursor-pointer opacity-50 group-hover:opacity-100 transition-opacity"
+            >
+              <svg
+                class="w-5 h-5 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
             </div>
-            <h3 class="font-semibold text-gray-900">Rating</h3>
-            <p class="text-2xl font-bold text-red-500">7.2/10</p>
+            <div
+              class="absolute bottom-full mb-2 w-64 -ml-10 p-3 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10"
+            >
+              Minimal flood risk based on elevation and drainage analysis.
+              <div
+                class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"
+              ></div>
+            </div>
+            <p class="text-5xl font-extrabold text-red-500">Low</p>
+            <h3 class="text-lg font-semibold text-gray-800 mt-2">
+              Flood Risk
+            </h3>
+            <p class="text-gray-600 mt-1 text-sm">
+              Minimal flood risk based on elevation and drainage analysis.
+            </p>
           </div>
 
-          <div class="text-center">
-            <div class="bg-blue-50 p-6 rounded-lg mb-4">
-              <canvas id="individualityChart" width="150" height="150"></canvas>
+          <!-- Metric 2: Power Availability -->
+          <div class="relative group border-l-4 border-green-600 pl-6">
+            <div
+              class="absolute top-0 right-0 -mt-2 mr-2 cursor-pointer opacity-50 group-hover:opacity-100 transition-opacity"
+            >
+              <svg
+                class="w-5 h-5 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
             </div>
-            <h3 class="font-semibold text-gray-900">Price Individuality</h3>
-            <p class="text-2xl font-bold text-blue-500">85%</p>
+            <div
+              class="absolute bottom-full mb-2 w-64 -ml-10 p-3 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10"
+            >
+              Excellent power supply with backup generators.
+              <div
+                class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"
+              ></div>
+            </div>
+            <p class="text-5xl font-extrabold text-green-600">92</p>
+            <h3 class="text-lg font-semibold text-gray-800 mt-2">
+              Power Availability
+            </h3>
+            <p class="text-gray-600 mt-1 text-sm">
+              Excellent power supply with backup generators.
+            </p>
           </div>
 
-          <div class="text-center">
-            <div class="bg-green-50 p-6 rounded-lg mb-4">
-              <canvas id="scoreChart" width="150" height="150"></canvas>
+          <!-- Metric 3: Security Score -->
+          <div class="relative group border-l-4 border-green-600 pl-6">
+            <div
+              class="absolute top-0 right-0 -mt-2 mr-2 cursor-pointer opacity-50 group-hover:opacity-100 transition-opacity"
+            >
+              <svg
+                class="w-5 h-5 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
             </div>
-            <h3 class="font-semibold text-gray-900">Monthly Score</h3>
-            <p class="text-2xl font-bold text-green-500">92</p>
+            <div
+              class="absolute bottom-full mb-2 w-64 -ml-10 p-3 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10"
+            >
+              Gated estate with 24/7 security and CCV.
+              <div
+                class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"
+              ></div>
+            </div>
+            <p class="text-5xl font-extrabold text-green-600">95</p>
+            <h3 class="text-lg font-semibold text-gray-800 mt-2">
+              Security Score
+            </h3>
+            <p class="text-gray-600 mt-1 text-sm">
+              Gated estate with 24/7 security and CCV.
+            </p>
+          </div>
+
+          <!-- Metric 4: Opulence Score -->
+          <div class="relative group border-l-4 border-orange-500 pl-6">
+            <div
+              class="absolute top-0 right-0 -mt-2 mr-2 cursor-pointer opacity-50 group-hover:opacity-100 transition-opacity"
+            >
+              <svg
+                class="w-5 h-5 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="absolute bottom-full mb-2 w-64 -ml-10 p-3 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10"
+            >
+              High-end neighborhood with premium amenities.
+              <div
+                class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"
+              ></div>
+            </div>
+            <p class="text-5xl font-extrabold text-orange-500">88</p>
+            <h3 class="text-lg font-semibold text-gray-800 mt-2">
+              Opulence Score
+            </h3>
+            <p class="text-gray-600 mt-1 text-sm">
+              High-end neighborhood with premium amenities.
+            </p>
+          </div>
+
+          <!-- Metric 5: Running Water -->
+          <div
+            class="relative group bg-white rounded-lg p-4 shadow-md text-center"
+          >
+            <div
+              class="absolute top-0 right-0 mt-2 mr-2 cursor-pointer opacity-50 group-hover:opacity-100 transition-opacity"
+            >
+              <svg
+                class="w-5 h-5 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="absolute bottom-full mb-2 w-64 -ml-24 p-3 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10"
+            >
+              Indicates if the property has a consistent supply of running
+              water.
+              <div
+                class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"
+              ></div>
+            </div>
+            <p class="text-2xl font-bold text-green-600">Yes</p>
+            <h3 class="text-sm font-semibold text-gray-800 mt-1">
+              Running Water
+            </h3>
+          </div>
+
+          <!-- Metric 6: Landlord Neighbour -->
+          <div
+            class="relative group bg-white rounded-lg p-4 shadow-md text-center"
+          >
+            <div
+              class="absolute top-0 right-0 mt-2 mr-2 cursor-pointer opacity-50 group-hover:opacity-100 transition-opacity"
+            >
+              <svg
+                class="w-5 h-5 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="absolute bottom-full mb-2 w-64 -ml-24 p-3 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10"
+            >
+              Indicates if the landlord lives in the same compound or property.
+              <div
+                class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"
+              ></div>
+            </div>
+            <p class="text-2xl font-bold text-red-500">No</p>
+            <h3 class="text-sm font-semibold text-gray-800 mt-1">
+              Landlord Neighbour
+            </h3>
+          </div>
+
+          <!-- Metric 7: Personal Meter -->
+          <div
+            class="relative group bg-white rounded-lg p-4 shadow-md text-center"
+          >
+            <div
+              class="absolute top-0 right-0 mt-2 mr-2 cursor-pointer opacity-50 group-hover:opacity-100 transition-opacity"
+            >
+              <svg
+                class="w-5 h-5 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="absolute bottom-full mb-2 w-64 -ml-24 p-3 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10"
+            >
+              Indicates if the property has a dedicated electricity meter.
+              <div
+                class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"
+              ></div>
+            </div>
+            <p class="text-2xl font-bold text-red-500">No</p>
+            <h3 class="text-sm font-semibold text-gray-800 mt-1">
+              Personal Meter
+            </h3>
+          </div>
+
+          <!-- Metric 8: Pets Allowed -->
+          <div
+            class="relative group bg-white rounded-lg p-4 shadow-md text-center"
+          >
+            <div
+              class="absolute top-0 right-0 mt-2 mr-2 cursor-pointer opacity-50 group-hover:opacity-100 transition-opacity"
+            >
+              <svg
+                class="w-5 h-5 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="absolute bottom-full mb-2 w-64 -ml-24 p-3 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10"
+            >
+              Indicates if pets are allowed in the property.
+              <div
+                class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"
+              ></div>
+            </div>
+            <p class="text-2xl font-bold text-green-600">Yes</p>
+            <h3 class="text-sm font-semibold text-gray-800 mt-1">
+              Pets Allowed
+            </h3>
           </div>
         </div>
       </div>
@@ -215,9 +461,9 @@
     <!-- Property Description -->
     <section class="bg-gray-0 py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 gap-12">
           <div>
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
               Property Description
             </h2>
             <p class="text-gray-600 mb-6 leading-relaxed">
