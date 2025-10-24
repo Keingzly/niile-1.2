@@ -1,3 +1,5 @@
+// main.js
+
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -35,4 +37,46 @@ document.addEventListener('DOMContentLoaded', function() {
     featureCards.forEach(card => {
         observer.observe(card);
     });
+
+    // ==============================
+    // 🔗 Backend Connection Test
+    // ==============================
+
+    const backendURL = "https://niile-fullstack-backend-production.up.railway.app";
+
+    async function testBackendConnection() {
+        try {
+            const response = await fetch(`${backendURL}/api/data`);
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            const data = await response.json();
+            console.log("✅ Backend connected successfully:", data);
+            const message = document.createElement("div");
+            message.textContent = "Backend Connected ✅";
+            message.style.color = "green";
+            message.style.fontWeight = "bold";
+            message.style.position = "fixed";
+            message.style.bottom = "10px";
+            message.style.right = "10px";
+            message.style.background = "#e6ffe6";
+            message.style.padding = "8px 12px";
+            message.style.borderRadius = "8px";
+            document.body.appendChild(message);
+        } catch (error) {
+            console.error("❌ Failed to connect to backend:", error);
+            const message = document.createElement("div");
+            message.textContent = "Backend Connection Failed ❌";
+            message.style.color = "red";
+            message.style.fontWeight = "bold";
+            message.style.position = "fixed";
+            message.style.bottom = "10px";
+            message.style.right = "10px";
+            message.style.background = "#ffe6e6";
+            message.style.padding = "8px 12px";
+            message.style.borderRadius = "8px";
+            document.body.appendChild(message);
+        }
+    }
+
+    // Run connection test on page load
+    testBackendConnection();
 });
